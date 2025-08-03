@@ -16,7 +16,7 @@ from langchain.retrievers import ParentDocumentRetriever
 from langchain.storage import InMemoryStore
 
 
- Set up OpenAI key
+#Set up OpenAI key
 if load_dotenv('.env'):
     OPENAI_KEY = os.getenv('OPENAI_API_KEY')
 else:
