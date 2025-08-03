@@ -146,7 +146,8 @@ def main():
     if not utility.check_password():  
         st.stop()
 
-    username = st.session_state["username"]
+    #username = st.session_state["username"]
+    username = "User25"
     st.sidebar.success(f"Logged in as: {username}")
 
     # Admin UI
