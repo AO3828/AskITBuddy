@@ -139,9 +139,12 @@ if not utility.check_password():
 def main():
     st.set_page_config(page_title="AskITBuddy", layout="centered")
 
-    if "authenticated" not in st.session_state or not st.session_state["authenticated"]:
-        login()
-        return
+    #if "authenticated" not in st.session_state or not st.session_state["authenticated"]:
+    #    login()
+    #    return
+
+    if not utility.check_password():  
+    st.stop()
 
     username = st.session_state["username"]
     st.sidebar.success(f"Logged in as: {username}")
