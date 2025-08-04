@@ -158,9 +158,9 @@ def main():
     icons=["house","gear"])  # Optional (Bootstrap icons)
 
     with st.sidebar:
-    selected = option_menu("Main Menu", ["Home", 'Settings'], 
-        icons=['list-task', 'gear'], menu_icon="cast", default_index=0)
-    selected
+        selected = option_menu("Main Menu", ["Home", 'Settings'], 
+            icons=['list-task', 'gear'], menu_icon="cast", default_index=0)
+        selected
     
     username = st.session_state["username"]
 
@@ -209,6 +209,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
