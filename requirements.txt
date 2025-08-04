@@ -1,4 +1,5 @@
 streamlit
+streamlit-option-menu
 langchain
 langchain-openai
 langchain_community
@@ -6,4 +7,5 @@ faiss-cpu
 openai
 pandas
 python-dotenv
+
 pypdf
