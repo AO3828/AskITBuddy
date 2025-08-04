@@ -116,8 +116,8 @@ def show_onboarding_guidance(week, qa_chain=None):
                     handle_user_query(qa_chain, question)
 
 # Simple login screen
-def login():
-    st.title("🔐 Login to AskITBuddy")
+#def login():
+#    st.title("🔐 Login to AskITBuddy")
 #    with st.form("login_form"):
 #        username = st.text_input("Username")
 #        password = st.text_input("Password", type="password")
@@ -131,8 +131,8 @@ def login():
 #                st.rerun()
 # Do not continue if check_password is not True.  
 
-if not utility.check_password():  
-    st.stop()
+#if not utility.check_password():  
+#    st.stop()
 #            else:
 #                st.error("Invalid username or password.")
 
@@ -198,6 +198,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
