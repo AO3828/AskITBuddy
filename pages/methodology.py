@@ -5,7 +5,7 @@ st.title("Methodology")
 
 # Section 1: Overview
 st.header("How this App Works")
-st.write("""
+st.markdown("""
 This chatbot prototype uses a Retrieval-Augmented Generation (RAG) approach to answer onboarding-related questions using internal documents.
 
 It combines document retrieval with OpenAI's GPT-4o model to provide relevant and contextual answers, based only on the uploaded onboarding packs.
@@ -17,7 +17,7 @@ st.markdown("""
 The app works in the following steps:
 
 1. **Document Upload (Admin)**  
-   Admins upload PDF onboarding packs (e.g., Day 1, Week 1, Month 1).
+   - Admins upload PDF onboarding packs (e.g., Day 1, Week 1, Month 1).
 
 2. **Document Parsing and Chunking**  
    - PDFs are loaded and split into smaller text chunks using `RecursiveCharacterTextSplitter`.
@@ -33,8 +33,8 @@ The app works in the following steps:
    - The selected chunks are passed to GPT-4o, which generates a concise, helpful answer based only on the document content.
 
 5. **Answering Policy**  
-   If no relevant content is found, the bot will say:  
-   "I don't know. Thanks for asking!"
+   - If no relevant content is found, the bot will say:  
+     "I don't know. Thanks for asking!"
 """)
 
 # Section 3: Tools & Libraries
@@ -54,3 +54,4 @@ st.markdown("""
 - Simple login system for role-based access
 - Session history for user queries
 """)
+
