@@ -133,7 +133,7 @@ def login():
 
 username = st.selectbox(
     "Please select:",
-    options=["user", "admin"]
+    options=["user", "admin"])
 
 st.session_state["username"] = username
     
@@ -199,5 +199,6 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
