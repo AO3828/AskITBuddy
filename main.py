@@ -147,10 +147,15 @@ def main():
     if not utility.check_password():  
         st.stop()
 
-    st.session_state["username"] = st.selectbox(
-        "Please select your role:",
-        options=["user", "admin"])
+    #st.session_state["username"] = st.selectbox(
+    #    "Please select your role:",
+    #    options=["user", "admin"])
 
+    st.session_state["username = option_menu(
+    menu_title="Please select your role:",  # Required
+    options=["user", "admin"],  # Required
+    icons=["house", "info-circle"],  # Optional (Bootstrap icons)
+    
     username = st.session_state["username"]
 
     st.sidebar.success(f"Logged in as: {username}")
@@ -198,6 +203,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
