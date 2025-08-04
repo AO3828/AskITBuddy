@@ -155,7 +155,7 @@ def main():
     st.session_state["username"] = option_menu(
     menu_title="Please select your role:",  # Required
     options=["user", "admin"],  # Required
-    default_index(default=0),
+    default_index=(default=0),
     icons=["info-circle","wench adjustable"])  # Optional (Bootstrap icons)
     
     username = st.session_state["username"]
@@ -205,6 +205,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
