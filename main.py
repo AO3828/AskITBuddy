@@ -150,7 +150,7 @@ def main():
 
     with st.sidebar:
         st.session_state["username"] = st.selectbox(
-            "Please select your role:",
+            "Logged in as:",
             options=["user", "admin"])
 
     #st.session_state["username"] = option_menu(
@@ -165,7 +165,7 @@ def main():
     
     username = st.session_state["username"]
 
-    st.sidebar.success(f"Logged in as: {username}")
+    #st.sidebar.success(f"Logged in as: {username}")
 
     # Admin UI
     if username == "admin":
@@ -210,6 +210,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
