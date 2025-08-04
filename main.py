@@ -148,14 +148,15 @@ def main():
     if not utility.check_password():  
         st.stop()
 
-    #st.session_state["username"] = st.selectbox(
-    #    "Please select your role:",
-    #    options=["user", "admin"])
+    with st.sidebar:
+        st.session_state["username"] = st.selectbox(
+            "Please select your role:",
+            options=["user", "admin"])
 
-    st.session_state["username"] = option_menu(
-    menu_title="Please select your role:",  # Required
-    options=["user", "admin"],  # Required
-    icons=["house","gear"], menu_icon="tencent-qq", default_index=0)  # Optional (Bootstrap icons)
+    #st.session_state["username"] = option_menu(
+    #menu_title="Please select your role:",  # Required
+    #options=["user", "admin"],  # Required
+    #icons=["house","gear"], menu_icon="tencent-qq", default_index=0)  # Optional (Bootstrap icons)
 
     #with st.sidebar:
     #    selected = option_menu("Main Menu", ["Home", 'Settings'], 
@@ -209,6 +210,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
