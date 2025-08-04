@@ -151,7 +151,7 @@ def main():
     #    "Please select your role:",
     #    options=["user", "admin"])
 
-    st.session_state["username = option_menu(
+    st.session_state["username"] = option_menu(
     menu_title="Please select your role:",  # Required
     options=["user", "admin"],  # Required
     icons=["house", "info-circle"],  # Optional (Bootstrap icons)
@@ -203,6 +203,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
