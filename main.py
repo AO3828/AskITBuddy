@@ -131,12 +131,6 @@ def login():
 #                st.rerun()
 # Do not continue if check_password is not True.  
 
-username = st.selectbox(
-    "Please select:",
-    options=["user", "admin"])
-
-st.session_state["username"] = username
-    
 if not utility.check_password():  
     st.stop()
 #            else:
@@ -153,8 +147,13 @@ def main():
     if not utility.check_password():  
         st.stop()
 
-    username = st.session_state["username"]
-    st.sidebar.success(f"Logged in as: {username}")
+    username = st.selectbox(
+        "Please select:",
+        options=["user", "admin"])
+
+    #st.session_state["username"] = username
+
+    st.sidebar.success(f"Logged in as: {st.session_state["username"]}")
 
     # Admin UI
     if username == "admin":
@@ -199,6 +198,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
