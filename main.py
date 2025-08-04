@@ -152,19 +152,19 @@ def main():
     #    "Please select your role:",
     #    options=["user", "admin"])
 
-    #st.session_state["username"] = option_menu(
-    #menu_title="Please select your role:",  # Required
-    #options=["user", "admin"],  # Required
-    #icons=["house","gear"])  # Optional (Bootstrap icons)
+    st.session_state["username"] = option_menu(
+    menu_title="Please select your role:",  # Required
+    options=["user", "admin"],  # Required
+    icons=["house","gear"])  # Optional (Bootstrap icons)
 
-    with st.sidebar:
-    st.session_state["username"] = selected = option_menu("Main Menu", ["Home", 'Settings'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=0)
-    selected
+    #with st.sidebar:
+    #st.session_state["username"] = selected = option_menu("Main Menu", ["Home", 'Settings'], 
+    #    icons=['house', 'gear'], menu_icon="cast", default_index=0)
+    #selected
     
     username = st.session_state["username"]
 
-    #st.sidebar.success(f"Logged in as: {username}")
+    st.sidebar.success(f"Logged in as: {username}")
 
     # Admin UI
     if username == "admin":
@@ -209,6 +209,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
