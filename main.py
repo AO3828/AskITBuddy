@@ -71,10 +71,10 @@ def handle_user_query(qa_chain, user_query):
     result = qa_chain(user_query)
     st.write("### Answer:")
     st.write(result["result"])
-    with st.expander("Show Retrieved Chunks"):
-        for i, doc in enumerate(result["source_documents"]):
-            st.markdown(f"**Chunk {i+1}:**")
-            st.code(doc.page_content[:1000])
+#    with st.expander("Show Retrieved Chunks"):
+#        for i, doc in enumerate(result["source_documents"]):
+#            st.markdown(f"**Chunk {i+1}:**")
+#            st.code(doc.page_content[:1000])
 
 # Customized onboarding suggestions per week
 def show_onboarding_guidance(week, qa_chain=None):
@@ -148,7 +148,7 @@ def main():
         st.stop()
 
     st.session_state["username"] = st.selectbox(
-        "Please select:",
+        "Please select your role:",
         options=["user", "admin"])
 
     username = st.session_state["username"]
@@ -198,6 +198,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
