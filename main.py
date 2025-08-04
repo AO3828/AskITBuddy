@@ -153,7 +153,7 @@ def main():
 
     username = st.session_state["username"]
 
-    st.sidebar.success(f"Logged in as: {"username"}")
+    st.sidebar.success(f"Logged in as: {username}")
 
     # Admin UI
     if username == "admin":
@@ -198,6 +198,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
