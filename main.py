@@ -172,7 +172,7 @@ def main():
 
         st.write("Uploaded files:")
         filelist=[]
-        for root, dirs, files in os.walk(data_path):
+        for root, dirs, files in os.walk("data"):
             for file in files:
                 filename=os.path.join(root, file)
                 filelist.append(filename)
