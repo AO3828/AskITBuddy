@@ -170,14 +170,6 @@ def main():
     # Admin UI
     if username == "admin":
 
-        st.write("Uploaded files:")
-        filelist=[]
-        for root, dirs, files in os.walk("data"):
-            for file in files:
-                filename=os.path.join(root, file)
-                filelist.append(filename)
-        st.write(filelist)
-
         st.title("📁 Admin Dashboard")
         uploaded_files = st.file_uploader("Upload PDF files to the data folder", type=["pdf"], accept_multiple_files=True)
         if uploaded_files:
@@ -189,6 +181,15 @@ def main():
                     f.write(file.getbuffer())
             st.success("Files uploaded successfully. Please refresh or rerun to build retriever.")
         return
+
+
+        st.title("Uploaded files:")
+        filelist=[]
+        for root, dirs, files in os.walk("data"):
+            for file in files:
+                filename=os.path.join(root, file)
+                filelist.append(filename)
+        st.write(filelist)
 
 
     # User UI
