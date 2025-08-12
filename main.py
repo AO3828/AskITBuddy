@@ -181,6 +181,14 @@ def main():
             st.success("Files uploaded successfully. Please refresh or rerun to build retriever.")
         return
 
+        st.write("Uploaded files:")
+        filelist=[]
+        for root, dirs, files in os.walk("your folder directory"):
+            for file in files:
+                filename=os.path.join(root, file)
+                filelist.append(filename)
+        st.write(filelist)
+
     # User UI
     st.title("AskITBuddy - Your IT Onboarding Assistant")
 
