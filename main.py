@@ -171,12 +171,13 @@ def main():
     if username == "admin":
 
         st.title("📁 Admin Dashboard")
-        st.write("Uploaded files:")
+        st.subheader("Uploaded files:")
         filelist=[]
         for root, dirs, files in os.walk("data"):
             for file in files:
                 filename=os.path.join(root, file)
                 filelist.append(filename)
+        with st.expander("Click to see the uploaded files"):
         st.write(filelist)
 
 
@@ -222,6 +223,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
