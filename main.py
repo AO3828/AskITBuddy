@@ -178,7 +178,7 @@ def main():
                 filename=os.path.join(root, file)
                 filelist.append(filename)
         with st.expander("Click to see the uploaded files"):
-        st.write(filelist)
+            st.write(filelist)
 
 
         st.write("Upload files:")
@@ -223,6 +223,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
