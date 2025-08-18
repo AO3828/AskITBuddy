@@ -152,7 +152,7 @@ div[class*="stTextInput"] label p {
   color: black;
 }
 
-div[class*="stSelectBox"] label p {
+div[class*="stSelect"] label p {
   font-size: 24px;
   color: green;
 }
@@ -266,6 +266,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
