@@ -170,7 +170,7 @@ def main():
     #    login()
     #    return
 
-    if not utility.check_password():  
+    if not check_password():  
         st.stop()
 
     with st.sidebar:
@@ -259,6 +259,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
