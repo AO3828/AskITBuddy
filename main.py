@@ -139,7 +139,7 @@ def show_onboarding_guidance(week, qa_chain=None):
 #                st.rerun()
 # Do not continue if check_password is not True. 
 
-
+# Style sheet for text of input text box
 tabs_font_css = """
 <style>
 div[class*="stTextArea"] label p {
@@ -159,11 +159,14 @@ div[class*="stNumberInput"] label p {
 </style>
 """
 
-st.write(tabs_font_css, unsafe_allow_html=True)
+#st.write(tabs_font_css, unsafe_allow_html=True)
 
-st.text_area("Text area")
-st.text_input("Text input")
-st.number_input("Number input")
+#st.text_area("Text area")
+#st.text_input("Text input")
+#st.number_input("Number input")
+
+#########
+
 
 
 # App main
@@ -263,6 +266,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
