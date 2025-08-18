@@ -149,12 +149,10 @@ div[class*="stTextArea"] label p {
 
 div[class*="stTextInput"] label p {
   font-size: 24px;
-  color: black;
 }
 
 div[class*="stSelect"] label p {
   font-size: 24px;
-  color: black;
 }
 </style>
 """
@@ -266,6 +264,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
