@@ -195,7 +195,7 @@ def main():
     # Admin UI
     if username == "admin":
 
-        st.title("📁 Admin Dashboard")
+        st.header("📁 Admin Dashboard")
 
         st.write("")
         st.subheader("Files uploaded:")        
@@ -259,6 +259,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
