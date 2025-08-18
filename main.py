@@ -143,17 +143,17 @@ def show_onboarding_guidance(week, qa_chain=None):
 tabs_font_css = """
 <style>
 div[class*="stTextArea"] label p {
-  font-size: 26px;
+  font-size: 24px;
   color: red;
 }
 
 div[class*="stTextInput"] label p {
-  font-size: 26px;
-  color: blue;
+  font-size: 24px;
+  color: black;
 }
 
 div[class*="stNumberInput"] label p {
-  font-size: 26px;
+  font-size: 24px;
   color: green;
 }
 </style>
@@ -263,6 +263,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
