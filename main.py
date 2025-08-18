@@ -209,7 +209,7 @@ def main():
 
 
     # User UI
-    st.title("AskITBuddy - Your IT Onboarding Assistant")
+    st.header("AskITBuddy - Your IT Onboarding Assistant")
 
     retriever = build_retriever_from_data_folder("data")
     if not retriever:
@@ -237,6 +237,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
