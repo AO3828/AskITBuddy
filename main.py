@@ -140,6 +140,32 @@ def show_onboarding_guidance(week, qa_chain=None):
 # Do not continue if check_password is not True. 
 
 
+tabs_font_css = """
+<style>
+div[class*="stTextArea"] label p {
+  font-size: 26px;
+  color: red;
+}
+
+div[class*="stTextInput"] label p {
+  font-size: 26px;
+  color: blue;
+}
+
+div[class*="stNumberInput"] label p {
+  font-size: 26px;
+  color: green;
+}
+</style>
+"""
+
+st.write(tabs_font_css, unsafe_allow_html=True)
+
+st.text_area("Text area")
+st.text_input("Text input")
+st.number_input("Number input")
+
+
 # App main
 def main():
     st.set_page_config(page_title="AskITBuddy", layout="centered")
@@ -237,6 +263,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
