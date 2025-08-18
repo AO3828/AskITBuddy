@@ -229,7 +229,8 @@ def main():
     )
     show_onboarding_guidance(onboarding_week, qa_chain=qa_chain)
 
-    user_query = st.text_input(st.subheader("Ask me anything about your IT onboarding:"))
+    with st.subheader:
+    user_query = st.text_input("Ask me anything about your IT onboarding:")
     if user_query:
         with st.spinner("Thinking..."):
             handle_user_query(qa_chain, user_query)
@@ -237,6 +238,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
