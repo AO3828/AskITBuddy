@@ -172,6 +172,9 @@ def main():
 
         st.title("📁 Admin Dashboard")
 
+        st.write("")
+        st.write("")
+        st.subheader("Files uploaded:")        
         filelist=[]
         for root, dirs, files in os.walk("data"):
             for file in files:
@@ -181,14 +184,17 @@ def main():
         with st.expander("Click to see the uploaded files"):
             st.write(filelist)
 
+        st.write("")
+        st.write("")
         # Delete uploaded file <path>/<filename>
-        st.subheader("Delete file <path>/<filename>:")
+        st.subheader("Delete file:")
 
-        file_to_delete = st.text_input("Enter the file path to delete:")
+        file_to_delete = st.text_input("Enter the file path <path>/<filename> to delete:")
         if st.button("Delete File"):
             delete_file(file_to_delete)
 
-        
+        st.write("")
+        st.write("")
         st.subheader("Upload files:")
         uploaded_files = st.file_uploader("Upload PDF files to the data folder", type=["pdf"], accept_multiple_files=True)
         if uploaded_files:
@@ -231,6 +237,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
