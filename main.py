@@ -190,7 +190,7 @@ def main():
         # Delete uploaded file <path>/<filename>
         st.subheader("Delete file:")
 
-        file_to_delete = st.text_input("Enter the file path <path>/<filename> to delete:")
+        file_to_delete = st.text_input("Enter the <path>/<filename> to delete:")
         if st.button("Delete File"):
             delete_file(file_to_delete)
 
@@ -237,6 +237,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
