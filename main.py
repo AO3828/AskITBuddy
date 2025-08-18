@@ -159,7 +159,7 @@ div[class*="stNumberInput"] label p {
 </style>
 """
 
-#st.write(tabs_font_css, unsafe_allow_html=True)
+st.write(tabs_font_css, unsafe_allow_html=True)
 
 #st.text_area("Text area")
 #st.text_input("Text input")
@@ -219,7 +219,7 @@ def main():
         # Delete uploaded file <path>/<filename>
         st.subheader("Delete file:")
 
-        file_to_delete = st.text_input("Enter the <path>/<filename> to delete:")
+        file_to_delete = st.text_input("<path>/<filename>")
         if st.button("Delete File"):
             delete_file(file_to_delete)
 
@@ -266,6 +266,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
