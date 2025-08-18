@@ -54,7 +54,8 @@ def build_retriever_from_data_folder(data_folder="data"):
     child_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     child_docs = child_splitter.split_documents(all_docs)
 
-    embeddings = OpenAIEmbeddings()
+    #embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(base_url="https://llmaas.govtext.gov.sg/gateway")
     vectorstore = FAISS.from_documents(child_docs, embedding=embeddings)
     docstore = InMemoryStore()
 
@@ -244,7 +245,8 @@ def main():
         return
 
     qa_chain = RetrievalQA.from_chain_type(
-        llm=ChatOpenAI(model="gpt-4o", temperature=0),
+        #llm=ChatOpenAI(model="gpt-4o", temperature=0),
+        llm=ChatOpenAI(openai_api_base="https://llmaas.govtext.gov.sg/gateway", model="gpt-4o", temperature=0),
         retriever=retriever,
         return_source_documents=True,
         chain_type_kwargs={"prompt": get_prompt_template()}
@@ -264,6 +266,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
