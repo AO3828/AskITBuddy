@@ -204,7 +204,7 @@ def main():
         st.header("📁 Admin Dashboard")
 
         st.write("")
-        st.subheader("Files uploaded:")        
+        st.subheader("Contextual data source:")        
         filelist=[]
         for root, dirs, files in os.walk("data"):
             for file in files:
@@ -219,7 +219,7 @@ def main():
         st.subheader("Delete file:")
 
         file_to_delete = st.text_input("<path>/<filename>")
-        if st.button("Delete File"):
+        if st.button("Delete"):
             delete_file(file_to_delete)
 
         st.write("")
@@ -266,6 +266,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
