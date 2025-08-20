@@ -223,7 +223,7 @@ def main():
             delete_file(file_to_delete)
 
         st.write("")
-        st.subheader("Upload files:")
+        st.subheader("Upload file:")
         uploaded_files = st.file_uploader("Upload PDF files to the data folder", type=["pdf"], accept_multiple_files=True)
         if uploaded_files:
             data_path = Path("data")
@@ -266,6 +266,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
