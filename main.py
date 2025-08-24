@@ -180,10 +180,11 @@ def main():
         st.stop()
 
     with st.sidebar:
-        st.session_state["username"] = st.selectbox(
-            "Logged in as:",
-            options=["user", "admin"])
-
+    #    st.session_state["username"] = st.selectbox(
+    #        "Logged in as:",
+    #        options=["user", "admin"])
+        st.session_state["usename"] = st.radio("Logged in as:", ["user", "admin"])
+        
     #st.session_state["username"] = option_menu(
     #menu_title="Please select your role:",  # Required
     #options=["user", "admin"],  # Required
@@ -258,7 +259,7 @@ def main():
     )
     show_onboarding_guidance(onboarding_week, qa_chain=qa_chain)
 
-    user_query = st.text_input("Ask me anything about your IT onboarding:")
+    user_query = st.text_area("Ask me anything about your IT onboarding:")
     if user_query:
         with st.spinner("Thinking..."):
             handle_user_query(qa_chain, user_query)
@@ -266,6 +267,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
