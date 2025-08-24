@@ -145,7 +145,6 @@ tabs_font_css = """
 <style>
 div[class*="stTextArea"] label p {
   font-size: 24px;
-  color: red;
 }
 
 div[class*="stTextInput"] label p {
@@ -180,10 +179,10 @@ def main():
         st.stop()
 
     with st.sidebar:
-        st.session_state["username"] = st.selectbox(
-            "Logged in as:",
-            options=["user", "admin"])
-    #   st.session_state["usename"] = st.radio("Logged in as:", ["user", "admin"])
+    #    st.session_state["username"] = st.selectbox(
+    #        "Logged in as:",
+    #        options=["user", "admin"])
+        st.session_state["usename"] = st.radio("Logged in as:", ("user", "admin"))
         
     #st.session_state["username"] = option_menu(
     #menu_title="Please select your role:",  # Required
@@ -267,6 +266,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
