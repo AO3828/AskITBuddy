@@ -50,8 +50,8 @@ with st.expander("Libraries and Tools Used"):
 st.header("Possible Enhancements")
 st.markdown("""
 - Add answer export (PDF or text)
-- Support for summarization
 - Simple login system for role-based access
 - Session history for user queries
 """)
+
 
