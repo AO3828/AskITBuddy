@@ -178,7 +178,7 @@ def main():
     if not utility.check_password():  
         st.stop()
 
-    st.sidebar.title("POC")
+    #st.sidebar.title("POC")
     with st.sidebar:
         st.session_state["username"] = st.selectbox(
             "Logged in as:",
@@ -238,7 +238,7 @@ def main():
 
 
     # User UI
-    st.header("AskITBuddy - Your IT Onboarding Assistant")
+    st.header("AskITBuddy - Your IT Onboarding Assistant (POC)")
 
     retriever = build_retriever_from_data_folder("data")
     if not retriever:
@@ -267,6 +267,7 @@ def main():
 # Run it
 if __name__ == "__main__":
     main()
+
 
 
 
