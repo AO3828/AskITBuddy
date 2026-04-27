@@ -5,17 +5,21 @@ from dotenv import load_dotenv
 from tempfile import NamedTemporaryFile
 from pathlib import Path
 from helper_functions import utility
-from langchain.chains import RetrievalQA
-from langchain.prompts import PromptTemplate
+#from langchain.chains import RetrievalQA
+from langchain_classic.chains.retrieval import create_retrieval_chain
+#from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 #from langchain.vectorstores import FAISS
 from langchain_community.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+#from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 #from langchain.document_loaders import PyPDFLoader
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.retrievers import ParentDocumentRetriever
-from langchain.storage import InMemoryStore
-
+#from langchain.retrievers import ParentDocumentRetriever
+from langchain_classic.retrievers import ParentDocumentRetriever
+#from langchain.storage import InMemoryStore
+from langgraph.store.memory import InMemoryStore
 
 #Set up OpenAI key
 if load_dotenv('.env'):
@@ -245,7 +249,8 @@ def main():
         st.warning("No retrievable documents found. Ask the Admin to upload PDFs first.")
         return
 
-    qa_chain = RetrievalQA.from_chain_type(
+    #qa_chain = RetrievalQA.from_chain_type(
+    qa_chain = create_retrieval_chain.from_chain_type(
         #llm=ChatOpenAI(model="gpt-4o", temperature=0),
         llm=ChatOpenAI(openai_api_base="https://llmaas.govtext.gov.sg/gateway", model="gpt-4o", temperature=0),
         retriever=retriever,
